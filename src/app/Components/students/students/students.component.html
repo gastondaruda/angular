@@ -1,0 +1,17 @@
+
+<p>Lista de estudiantes</p>
+
+<ul>
+    <li *ngFor="let persona of listaNombres">{{persona.nombre}}</li>
+</ul>
+
+<h6>Top 10</h6>
+<ol>
+    <div *ngFor="let persona of listaNombres">
+        <li *ngIf="persona.nota > 7">
+            <div>
+                {{persona.nombre}} - {{persona.nota}}
+            </div>
+        </li>
+    </div>
+</ol>
